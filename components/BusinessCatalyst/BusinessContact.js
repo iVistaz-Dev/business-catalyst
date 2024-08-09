@@ -1,4 +1,4 @@
-import Contact from "@/utils/contact"
+import Contact from "@/utils/Contact"
 import React from "react"
 
 export default function BusinessContact() {
