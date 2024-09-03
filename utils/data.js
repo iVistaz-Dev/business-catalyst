@@ -1715,7 +1715,7 @@ export const businesses = [
     icons:
       "https://s3.ap-south-1.amazonaws.com/com.cg.ivista.mediafiles/cms-origin/business-catalyst/systems.svg",
     title: "Support System",
-    desc: "Partnering with MSMEs – to help them expand their business in a sustainable way.",
+    desc: "Promoting best practices, understanding organisational development, and enabling ESG transition.",
     action: "flip-left",
   },
   {
