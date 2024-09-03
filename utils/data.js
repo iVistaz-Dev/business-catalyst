@@ -1748,7 +1748,7 @@ export const growthServices = [
     icons:
       "https://s3.ap-south-1.amazonaws.com/com.cg.ivista.mediafiles/cms-origin/business-catalyst/legalService.svg",
     title: "Legal Services",
-    desc: "Onboarding support to small and large businesses on major B2B and B2C e-commerce platforms to amplify profits.",
+    desc: "Provides legal and compliance support for business-specific registration and documentation.",
     services: [
       {
         icon: "https://s3.ap-south-1.amazonaws.com/com.cg.ivista.mediafiles/cms-origin/business-catalyst/compliance.svg",
