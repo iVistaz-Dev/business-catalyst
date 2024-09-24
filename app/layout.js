@@ -44,23 +44,26 @@ export default function RootLayout({ children }) {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </head>
-      <body>{children}</body>
-      {/* Google Tag Manager */}
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=AW-16667385703"
-      ></Script>
-      <Script
-        id="gtm-init"
-        dangerouslySetInnerHTML={{
-          __html: `
+      <body>
+        {/* Google Tag Manager */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16667385703"
+        ></Script>
+        <Script
+          id="gtm-init"
+          dangerouslySetInnerHTML={{
+            __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'AW-16667385703');
             `,
-        }}
-      />
+          }}
+        />
+
+        {children}
+      </body>
     </html>
   )
 }
