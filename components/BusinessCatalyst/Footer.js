@@ -1,43 +1,9 @@
-"use clients"
+import React from "react"
 
-import React, { useEffect } from "react"
 import Link from "next/link"
-import Script from "next/script"
 import { envelope, phone } from "@/utils/icon"
 
 export default function Footer() {
-  useEffect(() => {
-    // Handle form submission event when it's triggered
-    const handleFormSent = (event) => {
-      if (event.detail.contactFormId == "10377") {
-        window.gtag("event", "conversion", {
-          send_to: "AW-16667385703/NDw2CKjAvtMZEOe-0Is-",
-        })
-      }
-    }
-
-    // Attach the event listener to handle form submissions
-    document.addEventListener("wpcf7mailsent", handleFormSent, false)
-
-    // Handle page load event
-    const handlePageLoad = () => {
-      if (window.location.pathname === "/") {
-        window.gtag("event", "conversion", {
-          send_to: "AW-16667385703/xLbaCKSflcoZEOe-0Is-",
-        })
-      }
-    }
-
-    // Attach the load event listener
-    window.addEventListener("load", handlePageLoad)
-
-    // Cleanup listeners on unmount
-    return () => {
-      document.removeEventListener("wpcf7mailsent", handleFormSent)
-      window.removeEventListener("load", handlePageLoad)
-    }
-  }, [])
-
   return (
     <div className="bg-[#F2F2F2]">
       <div className="flex flex-col items-center p-4 md:p-6">
@@ -65,6 +31,12 @@ export default function Footer() {
             </Link>
             <hr className="bg-cms-primary-green h-1 my-4 w-3/4 md:w-full" />
           </div>
+          {/* <div className="flex flex-col items-center">
+            <p className="flex gap-2 items-center">
+              {globe} www.cms.org.in/business-catalyst/
+            </p>
+            <hr className="bg-cms-primary-green h-1 my-4 w-3/4 md:w-full" />
+          </div> */}
         </div>
       </div>
 
@@ -98,41 +70,6 @@ export default function Footer() {
           <br className="block md:hidden" /> All rights reserved.
         </p>
       </div>
-
-      {/* Google Tag Manager Scripts */}
-      <Script
-        id="gtag-init"
-        type="text/javascript"
-        dangerouslySetInnerHTML={{
-          __html: `
-          document.addEventListener(
-            "wpcf7mailsent",
-            function (event) {
-              if ("10377" == event.detail.contactFormId) {
-                gtag("event", "conversion", {
-                  send_to: "AW-16667385703/NDw2CKjAvtMZEOe-0Is-",
-                });
-              }
-            },
-            false,
-          );
-        `,
-        }}
-      />
-      <Script
-        id="gtag-page-load"
-        dangerouslySetInnerHTML={{
-          __html: `
-          document.addEventListener("load", function () {
-            if (window.location.pathname == "/") {
-              gtag("event", "conversion", {
-                send_to: "AW-16667385703/xLbaCKSflcoZEOe-0Is-",
-              });
-            }
-          });
-        `,
-        }}
-      />
     </div>
   )
 }
