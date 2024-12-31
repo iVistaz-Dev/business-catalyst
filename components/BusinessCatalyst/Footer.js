@@ -66,8 +66,8 @@ export default function Footer() {
       </div>
       <div className="mx-auto w-full text-center bg-[#713289] py-4">
         <p className="text-white ">
-          &copy; 2024 Catalyst Management Services Pvt. Ltd.{" "}
-          <br className="block md:hidden" /> All rights reserved.
+          &copy; {new Date().getFullYear()} Catalyst Management Services Pvt.
+          Ltd. <br className="block md:hidden" /> All rights reserved.
         </p>
       </div>
     </div>
