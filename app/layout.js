@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
           content="Through Business Catalyst, we partner with MSMEs to address their challenges regarding growth and profitability by following a 4A delivery model of Advisory, Adoption, Access and Adherance"
         />
         <link rel="canonical" href="https://cms.org.in/business-catalyst/" />
+        <meta name="robots" content="index, follow" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
         <meta
@@ -45,22 +46,22 @@ export default function RootLayout({ children }) {
         <meta name="twitter:card" content="summary_large_image" />
       </head>
       <body>{children}</body>
-      {/* Google Tag Manager */}
-      {/* <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=AW-16667385703"
-      ></Script>
+      {/* Google Analytics */}
       <Script
-        id="gtm-init"
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-8V8MC99056"
+      />
+      <Script
+        id="google-analytics-init"
         dangerouslySetInnerHTML={{
           __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'AW-16667385703');
+              gtag('config', 'G-8V8MC99056');
             `,
         }}
-      /> */}
+      />
       <Script
         id="google-tag-manager"
         strategy="afterInteractive"
