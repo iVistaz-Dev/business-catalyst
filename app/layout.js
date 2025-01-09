@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>{children}</body>
       {/* Google Analytics */}
-      {/* <Script
+      <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-8V8MC99056"
       />
@@ -74,7 +74,7 @@ export default function RootLayout({ children }) {
       })(window,document,'script','dataLayer','GTM-NHV672NK');
     `,
         }}
-      /> */}
+      />
     </html>
   )
 }
