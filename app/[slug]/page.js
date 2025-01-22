@@ -54,15 +54,15 @@ const Page = ({ params }) => {
 
             <Header />
 
-            <div className="mt-32 p-10">
+            <div className="p-10 bg-cms-primary h-[60vh] flex justify-center items-center">
               <h1
-                className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center sm:text-left"
+                className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center text-white"
                 dangerouslySetInnerHTML={{ __html: item.title }}
               />
             </div>
 
             <div className="">
-              <div className="w-10/12 mx-auto py-12">
+              <div className="p-10">
                 <p dangerouslySetInnerHTML={{ __html: item.content }} />
               </div>
             </div>
