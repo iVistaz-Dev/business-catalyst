@@ -63,7 +63,10 @@ const Page = ({ params }) => {
 
             <div className="">
               <div className="p-10">
-                <p dangerouslySetInnerHTML={{ __html: item.content }} />
+                <p
+                  className="wp-hyperlink"
+                  dangerouslySetInnerHTML={{ __html: item.content }}
+                />
               </div>
             </div>
           </div>

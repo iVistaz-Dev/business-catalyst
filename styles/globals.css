@@ -19,3 +19,7 @@ body {
 .react-multi-carousel-dot--active button {
   background: #7f3f97 !important;
 }
+
+.wp-hyperlink a {
+  color: #7f3f97 !important;
+}
