@@ -6,20 +6,15 @@ import MyCountry from "./MyCountry"
 
 export default function Contact() {
   const handleDataSelect = (data) => {
-    setCountry(data.country.name)
-    setCity(data.city.name)
-    setState(data.state.name)
-    setFormData({
-      ...formData,
+    setFormData((prev) => ({
+      ...prev,
       country: data.country.name,
       state: data.state.name,
       city: data.city.name,
-    })
+    }))
   }
 
-  const [country, setCountry] = useState("")
-  const [city, setCity] = useState("")
-  const [state, setState] = useState("")
+  const [resetLocationSelect, setResetLocationSelect] = useState(false)
   const [countryError, setCountryError] = useState("")
   const [stateError, setStateError] = useState("")
   const [cityError, setCityError] = useState("")
@@ -31,9 +26,9 @@ export default function Contact() {
     last_name: "",
     email: "",
     phone: "",
-    country: country,
-    state: state,
-    city: city,
+    country: "",
+    state: "",
+    city: "",
     company: "",
     comments: "",
     terms: false,
@@ -93,6 +88,8 @@ export default function Contact() {
           }
         )
         console.log(formDataToSend)
+        setResetLocationSelect(true) // trigger the reset
+        setTimeout(() => setResetLocationSelect(false), 100)
         setSuccessMessage("Thank you for submitting")
         setFormData({
           first_name: "",
@@ -207,6 +204,10 @@ export default function Contact() {
             errorCountry={countryError}
             errorCity={cityError}
             errorState={stateError}
+            isCountryExists={null}
+            isStateExists={null}
+            isCityExists={null}
+            resetTrigger={resetLocationSelect}
           />
         </div>
 
