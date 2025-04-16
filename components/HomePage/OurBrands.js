@@ -3,7 +3,7 @@
 import { brands } from "@/utils/data"
 import React from "react"
 
-export default function Brands() {
+export default function OurBrands() {
   return (
     <div className="p-6">
       <div className="flex justify-center flex-col items-center">

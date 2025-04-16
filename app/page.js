@@ -1,44 +1,52 @@
 "use client"
 
-import React, { useRef, useEffect } from "react"
+import React, { useEffect } from "react"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
-import Header from "@/components/BusinessCatalyst/Header"
-import Footer from "@/components/BusinessCatalyst/Footer"
-import BusinessesAchieve from "@/components/BusinessCatalyst/BusinessesAchieve"
-import OurExperience from "@/components/BusinessCatalyst/OurExperience"
-import Brands from "@/components/BusinessCatalyst/Brands"
-import Stories from "@/components/BusinessCatalyst/Stories"
-import Cta from "@/components/BusinessCatalyst/Cta"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+import OurExperience from "@/components/HomePage/OurExperience"
+import OurBrands from "@/components/HomePage/OurBrands"
+import HelpingBusinesses from "@/components/HomePage/HelpingBusinesses"
+import SuccessStories from "@/components/HomePage/SuccessStories"
+import { useRouter } from "next/navigation"
 
-export default function page() {
+export default function Page() {
+  const router = useRouter()
+
   useEffect(() => {
+    // Initialize AOS animation
     AOS.init({
-      delay: 0, // values from 0 to 3000, with step 50ms
-      duration: 400, // values from 0 to 3000, with step 50ms
+      delay: 0,
+      duration: 400,
       easing: "ease",
     })
-  })
+  }, [])
 
-  const section1Ref = useRef(null)
-  const scrollToSection1 = () => {
-    section1Ref.current.scrollIntoView({ behavior: "smooth" })
-  }
-  // const title =
-  //   "Business Consultation for MSMEs | Facilitating growth for MSMEs"
-  // const desc =
-  //   "Through Business Catalyst, we partner with MSMEs to address their challenges regarding growth and profitability by following a 4A delivery model of Advisory, Adoption, Access and Adherance"
-  // const image =
-  //   "https://s3.ap-south-1.amazonaws.com/com.cg.ivista.mediafiles/cms-origin/business-catalyst/business-catalysts-banner.png"
+  useEffect(() => {
+    // Check if we have the scrollTo query param and the router is ready
+    if (router.isReady && router.query.scrollTo === "successStories") {
+      const section = document.getElementById("successStories")
+      if (section) {
+        // Scroll to the section with the id "successStories"
+        window.scrollTo({
+          top: section.offsetTop,
+          behavior: "smooth",
+        })
+        // Clean up the query param after navigating
+        router.replace("/", undefined, { shallow: true })
+      }
+    }
+  }, [router.query, router.isReady])
+
   return (
     <>
-      <Header onClick={scrollToSection1} data-aos="fade-up" />
-      <BusinessesAchieve data-aos="fade-up" />
+      <Header />
+      <HelpingBusinesses data-aos="fade-up" />
       <OurExperience />
-      <Brands />
-      <Stories ref={section1Ref} />
-      <Cta />
+      <OurBrands />
+      <SuccessStories id="successStories" />
       <Footer />
     </>
   )

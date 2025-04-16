@@ -2,7 +2,7 @@
 
 import React, { useState } from "react"
 import axios from "axios"
-import MyCountry from "./MyCountry"
+import MyCountry from "../../utils/MyCountry"
 
 export default function Contact() {
   const handleDataSelect = (data) => {

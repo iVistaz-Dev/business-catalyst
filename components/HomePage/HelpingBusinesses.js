@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 import { businesses, growthServices } from "@/utils/data"
 
-export default function BusinessesAchieve() {
+export default function HelpingBusinesses() {
   return (
     <div className="pt-[68px] md:pt-20">
       <img

@@ -3,7 +3,7 @@
 import React, { useRef } from "react"
 import Link from "next/link"
 
-export default function Header({ onClick }) {
+export default function Header() {
   return (
     <div className="bg-cms-primary-green z-50 fixed top-0 right-0 left-0">
       <div className="flex justify-between relative lg:w-10/12 mx-auto">
@@ -18,9 +18,15 @@ export default function Header({ onClick }) {
         </div>
         <div></div>
         <div className="right-0 lg:p-6 flex gap-4 py-4 justify-center items-center">
-          <p className="lg:text-xl text-white cursor-pointer" onClick={onClick}>
+          {/* <p className="lg:text-xl text-white cursor-pointer" onClick={onClick}>
             Success Stories
-          </p>
+          </p> */}
+          <Link
+            className="lg:text-xl text-white cursor-pointer"
+            href="/#successStories"
+          >
+            Success Stories
+          </Link>
           <Link
             href="/business-catalyst-contact"
             className="bg-white lg:py-2 lg:px-8 py-2 px-6 lg:rounded-full lg:text-xl rounded-lg"

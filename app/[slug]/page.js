@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import NextSeo from "@/components/NextSeo/NextSeo"
-import Header from "@/components/BusinessCatalyst/Header"
+import Header from "@/components/Header"
 
 const Page = ({ params }) => {
   const [insightsData, setInsightsData] = useState([])

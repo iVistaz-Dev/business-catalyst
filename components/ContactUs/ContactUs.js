@@ -1,7 +1,7 @@
-import Contact from "@/utils/Contact"
+import Contact from "@/components/ContactUs/Contact"
 import React from "react"
 
-export default function BusinessContact() {
+export default function ContactUs() {
   return (
     <div className="">
       <img
