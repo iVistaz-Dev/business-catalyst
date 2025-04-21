@@ -18,6 +18,10 @@ export default function RootLayout({ children }) {
           name="description"
           content="Through Business Catalyst, we partner with MSMEs to address their challenges regarding growth and profitability by following a 4A delivery model of Advisory, Adoption, Access and Adherance"
         />
+        <meta
+          name="google-site-verification"
+          content="-1mm8QlMUW2-NkTE7H1DM1Ya3qnLXa_RuF4nbtaG9dI"
+        />
         <link rel="canonical" href="https://cms.org.in/business-catalyst/" />
         <meta name="robots" content="index, follow" />
         <meta property="og:locale" content="en_US" />
