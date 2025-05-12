@@ -79,7 +79,7 @@ export default function Contact() {
       }
       try {
         const response = await axios.post(
-          "https://docs.cms.org.in/wp-json/contact-form-7/v1/contact-forms/10377/feedback",
+          "https://docs.cms.org.in/wp-json/contact-form-7/v1/contact-forms/10248/feedback",
           formDataToSend,
           {
             headers: {
