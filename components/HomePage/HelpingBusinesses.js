@@ -1,13 +1,16 @@
 import React from "react"
 import Link from "next/link"
 import { businesses, growthServices } from "@/utils/data"
+import Image from "next/image"
 
 export default function HelpingBusinesses() {
   return (
     <div className="pt-[68px] md:pt-20">
-      <img
-        src="https://s3.ap-south-1.amazonaws.com/com.cg.ivista.mediafiles/cms-origin/business-catalyst/business-catalysts-banner.png"
+      <Image
+        src="/business-catalysts-banner.png"
         className="w-full "
+        height={500}
+        width={1000}
         //data-aos="zoom-in"
       />
       <div
