@@ -11,11 +11,11 @@ export default function HelpingBusinesses() {
         className="w-full "
         height={500}
         width={1000}
-        data-aos="zoom-in"
+        //data-aos="zoom-in"
       />
       <div
         className="p-10 text-center flex flex-col justify-center items-center gap-4"
-        data-aos="fade-up"
+        //data-aos="fade-up"
       >
         <h1 className="lg:text-5xl text-[#7E3F98] text-center text-3xl">
           Helping Businesses Achieve

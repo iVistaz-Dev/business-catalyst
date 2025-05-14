@@ -12,7 +12,7 @@ export default function Header() {
             <img
               src="https://s3.ap-south-1.amazonaws.com/com.cg.ivista.mediafiles/cms-origin/business-catalyst/logo.png"
               className="w-8/12 lg:w-full"
-              data-aos="fade-up"
+              //data-aos="fade-up"
             />
           </Link>
         </div>
