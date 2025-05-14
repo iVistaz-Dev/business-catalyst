@@ -8,11 +8,11 @@ export default function HelpingBusinesses() {
       <img
         src="https://s3.ap-south-1.amazonaws.com/com.cg.ivista.mediafiles/cms-origin/business-catalyst/business-catalysts-banner.png"
         className="w-full "
-        data-aos="zoom-in"
+        //data-aos="zoom-in"
       />
       <div
         className="p-10 text-center flex flex-col justify-center items-center gap-4"
-        data-aos="fade-up"
+        //data-aos="fade-up"
       >
         <h1 className="lg:text-5xl text-[#7E3F98] text-center text-3xl">
           Helping Businesses Achieve

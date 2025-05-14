@@ -43,7 +43,7 @@ export default function Page() {
   return (
     <>
       <Header />
-      <HelpingBusinesses data-aos="fade-up" />
+      <HelpingBusinesses />
       <OurExperience />
       <OurBrands />
       <SuccessStories id="successStories" />
